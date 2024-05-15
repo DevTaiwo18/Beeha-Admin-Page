@@ -1,0 +1,39 @@
+.bg{
+    background-color: rgb(110,38,14);
+}
+
+.full{
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+}
+
+@media (max-width:1000px) {
+    .eee{
+        flex-wrap: wrap;
+    }
+
+    .prod{
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .tee{
+        font-size: 10px !important;
+    }
+
+    .tdd{
+        font-size: 9px !important;
+    }
+}
+
+.list-none {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-none li {
+    margin-right: 8px; 
+}

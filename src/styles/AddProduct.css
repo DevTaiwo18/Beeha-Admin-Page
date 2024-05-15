@@ -1,0 +1,135 @@
+.add-product-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.143);
+    backdrop-filter: blur(0.5px);
+    z-index: 1050;
+}
+
+.add-product-form {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 82%;
+    height: 100vh;
+    background: #fff;
+    padding: 10px 30px;
+    box-shadow: -10px 0 25px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1100;
+}
+
+.add-product-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-product-form label {
+    display: block;
+    margin-top: 15px;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form select,
+.add-product-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.add-product-form .drag-drop-area {
+    position: relative;
+    border: 2px dashed #6e260e;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.add-product-form .drag-drop-area input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.add-product-form .buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-product-form .buttons button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #6e260e;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-product-form .buttons button:hover {
+    background-color: #50290c;
+}
+
+
+.sizes-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-product-form .size-label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+
+@media (max-width: 1200px) {
+    .add-product-form {
+        width: 90%;
+        padding: 10px 20px;
+    }
+
+    .add-product-form h2,
+    .add-product-form label {
+        font-size: 14px;
+    }
+
+    .add-product-form input[type="text"],
+    .add-product-form input[type="number"],
+    .add-product-form select,
+    .add-product-form textarea {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .add-product-form .drag-drop-area {
+        height: 120px;
+    }
+
+    .add-product-form .buttons button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .add-product-form {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
