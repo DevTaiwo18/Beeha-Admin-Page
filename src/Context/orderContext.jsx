@@ -15,7 +15,6 @@ const OrderProvider = ({ children }) => {
             return orderSummary.data
         } catch (error) {
             const errorMessage = error.message
-            console.log(errorMessage);
         }
     }
 
@@ -25,7 +24,6 @@ const OrderProvider = ({ children }) => {
             return dashboardMetrics.data
         } catch (error) {
             const errorMessage = error.message
-            console.log(errorMessage);
         }
     }
 

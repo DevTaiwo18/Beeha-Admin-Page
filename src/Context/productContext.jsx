@@ -18,7 +18,6 @@ const ProductProvider = ({ children }) => {
             return products.data;
         } catch (error) {
             const errorMessage = error.message
-            console.log(errorMessage);
         }
     }
 
@@ -28,7 +27,6 @@ const ProductProvider = ({ children }) => {
             return productStatus.data;
         } catch (error) {
             const errorMessage = error.message
-            console.log(errorMessage);
         }
     }
 
@@ -38,7 +36,6 @@ const ProductProvider = ({ children }) => {
             return product.data;
         } catch (error) {
             const errorMessage = error.message
-            console.log(errorMessage);
         }
     }
 
@@ -48,7 +45,6 @@ const ProductProvider = ({ children }) => {
             return product.data;
         } catch (error) {
             const errorMessage = error.message
-            console.log(errorMessage);
         }
     }
 
