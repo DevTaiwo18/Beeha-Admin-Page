@@ -27,10 +27,10 @@ function AdminSignin() {
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-[#f0f0f0]">
-            <div className="w-full max-w-md px-8 py-6 mt-4 text-left bg-white shadow-lg rounded-lg">
+            <div className="w-full max-w-md px-8 py-8 mt-4 text-left bg-white shadow-lg rounded-lg">
                 <div className="mb-6 text-center">
-                    <div className="h-24 w-24 mx-auto">
-                        <img src="/src/assets/Logo.jpg" alt="Your Logo" className="h-full w-full object-contain" />
+                    <div className="h-20 w-20 mx-auto">
+                        <img src="/src/assets/BEEHA LAGOS.png" alt="Your Logo" className="h-full w-full object-contain" />
                     </div>
                     <h3 className="mt-4 text-3xl font-bold" style={{ color: "rgb(110,38,14)" }}>Login</h3>
                 </div>
