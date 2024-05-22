@@ -7,9 +7,11 @@ import image from '../assets/download (1).png'
 const HorizontalNavbar = ({ toggleNav }) => {
     return (
         <div className="bg-[rgb(110,38,14)] text-white flex justify-between items-center px-4 fixed w-full z-10">
-            <div className="logo">
-                <img src={image} alt="Logo" className="h-16 w-auto" />
-            </div>
+            <Link to={"/dashboard/home"}>
+                <div className="logo">
+                    <img src={image} alt="Logo" className="h-16 w-auto" />
+                </div>
+            </Link>
             <div className='pr-5'>
                 <button onClick={toggleNav} className="text-white text-xl lg:hidden">
                     <FaBars />
