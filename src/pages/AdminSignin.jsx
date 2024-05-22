@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AlertMessage from "../component/AlertMessage";
 import { useNavigate } from 'react-router-dom';
+import image from '../assets/BEEHA LAGOS.png'
 
 function AdminSignin() {
     const [username, setUsername] = useState('');
@@ -30,7 +31,7 @@ function AdminSignin() {
             <div className="w-full max-w-md px-8 py-8 mt-4 text-left bg-white shadow-lg rounded-lg">
                 <div className="mb-6 text-center">
                     <div className="h-20 w-20 mx-auto">
-                        <img src="/src/assets/BEEHA LAGOS.png" alt="Your Logo" className="h-full w-full object-contain" />
+                        <img src={image} alt="Your Logo" className="h-full w-full object-contain" />
                     </div>
                     <h3 className="mt-4 text-3xl font-bold" style={{ color: "rgb(110,38,14)" }}>Login</h3>
                 </div>

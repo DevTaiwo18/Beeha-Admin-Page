@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import image from '../assets/download (1).png'
+
 
 const HorizontalNavbar = ({ toggleNav }) => {
     return (
         <div className="bg-[rgb(110,38,14)] text-white flex justify-between items-center px-4 fixed w-full z-10">
             <div className="logo">
-                <img src="/src/assets/download (1).png" alt="Logo" className="h-16 w-auto" />
+                <img src={image} alt="Logo" className="h-16 w-auto" />
             </div>
             <div className='pr-5'>
                 <button onClick={toggleNav} className="text-white text-xl lg:hidden">
