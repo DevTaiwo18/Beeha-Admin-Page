@@ -75,7 +75,6 @@ const Product = () => {
             if (searchName.trim() || category) {
                 const result = await getsearch(searchName, category);
                 if (result === undefined || result.data.length === 0) {
-                    setShowAlert(true);
                     handleReset();
                 } else {
                     setProducts(result.data);
