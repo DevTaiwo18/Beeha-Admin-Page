@@ -11,18 +11,18 @@ function AlertMessage({ status, message, onTrigger }) {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [onTrigger]); 
+  }, [onTrigger]);
 
-  if (!visible) return null;  
+  if (!visible) return null;
 
-  const alertClasses = `fixed top-5 left-40 md:left-1/2 transform -translate-x-1/2 px-6 py-3 rounded shadow-md ${
+  const alertClasses = `fixed inset-x-0 top-5 mx-auto w-11/12 max-w-md px-4 py-2 rounded shadow-md ${
     status === 'success' ? 'bg-green-500' : 'bg-red-500'
   } text-white text-sm flex items-center`;
 
   return (
     <div className={alertClasses} style={{ zIndex: 9999 }}>
-      <span className="flex-1 text-center ml-3 text-sm">{message}</span>
-      <button onClick={() => setVisible(false)} className="ml-4 text-xl">×</button>
+      <span className="flex-1 text-center ml-2 md:ml-3 text-xs md:text-sm">{message}</span>
+      <button onClick={() => setVisible(false)} className="ml-4 text-lg md:text-xl">×</button>
     </div>
   );
 }
