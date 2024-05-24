@@ -10,6 +10,7 @@ import OrderProvider from '../../Context/orderContext';
 import Shipping from './Shipping';
 import ProductProvider from '../../Context/productContext';
 import SingleProduct from './SingleProduct';
+import UserProvider from '../../Context/userContext';
 
 const RouteLink = () => {
     const [navOpen, setNavOpen] = useState(false);
@@ -17,29 +18,31 @@ const RouteLink = () => {
     const toggleNav = () => setNavOpen(!navOpen);
 
     const closeNavbar = () => {
-        setNavOpen(false); 
+        setNavOpen(false);
     };
 
     return (
         <div className="flex flex-col h-screen">
             <OrderProvider>
                 <ProductProvider>
-                    <HorizontalNavbar toggleNav={toggleNav} />
-                    <div className="flex flex-1 overflow-hidden">
-                        <div>
-                            <VerticalNavBar isOpen={navOpen} closeNavbar={closeNavbar} />
+                    <UserProvider>
+                        <HorizontalNavbar toggleNav={toggleNav} />
+                        <div className="flex flex-1 overflow-hidden">
+                            <div>
+                                <VerticalNavBar isOpen={navOpen} closeNavbar={closeNavbar} />
+                            </div>
+                            <div className="flex-1 overflow-auto px-5 pt-20">
+                                <Routes>
+                                    <Route path="/home" element={<Home />} />
+                                    <Route path="/product" element={<Product />} />
+                                    <Route path="/customer" element={<Customers />} />
+                                    <Route path="/order" element={<Order />} />
+                                    <Route path="/shipping" element={<Shipping />} />
+                                    <Route path="/:Id" element={<SingleProduct />} />
+                                </Routes>
+                            </div>
                         </div>
-                        <div className="flex-1 overflow-auto px-5 pt-20">
-                            <Routes>
-                                <Route path="/home" element={<Home />} />
-                                <Route path="/product" element={<Product />} />
-                                <Route path="/customer" element={<Customers />} />
-                                <Route path="/order" element={<Order />} />
-                                <Route path="/shipping" element={<Shipping />} />
-                                <Route path="/:Id" element={<SingleProduct />} />
-                            </Routes>
-                        </div>
-                    </div>
+                    </UserProvider>
                 </ProductProvider>
             </OrderProvider>
         </div>
