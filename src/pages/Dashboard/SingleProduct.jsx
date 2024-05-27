@@ -70,7 +70,7 @@ const SingleProduct = () => {
             </div>
             <div className="w-full md:w-1/2 p-4 text-gray-800">
                 <h1 className="text-3xl font-bold">{product.name}</h1>
-                <p className="my-4 text-lg">{product.description}</p>
+                <p className="my-4 text-sm">{product.description}</p>
                 <div className="text-2xl font-semibold">
                     <strong>Price:</strong> {formatCurrency(product.price)}
                 </div>
