@@ -55,7 +55,7 @@ const SingleProduct = () => {
 
     return (
         <div className="product-details flex flex-col md:flex-row mt-10 gap-5 items-start">
-            <div className="w-full md:w-1/2 mt-20">
+            <div className="w-full md:w-1/2 mt-7">
                 {product.images && product.images.length > 1 ? (
                     <Slider {...settings}>
                         {product.images.map((img, index) => (
